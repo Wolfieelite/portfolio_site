@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
 body {
   @apply m-0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Bytesized", sans-serif;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,4 +12,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#canvas{
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background: black; */
+  inset: 0;
+}
+
+.active {
+  color: red;
 }
