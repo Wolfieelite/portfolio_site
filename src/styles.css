@@ -1,28 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Fira+Code:wght@300..700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@view-transition {
+  navigation: auto;
+}
 
 body {
   @apply m-0;
-  font-family: "Bytesized", sans-serif;
-  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-#canvas{
-  z-index: -999;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  /* background: black; */
-  inset: 0;
+.header,
+.navigation {
+  font-family: 'Bytesized', sans-serif;
+  font-style: normal;
 }
 
 .active {
+  color: rgb(92, 2, 2);
+  transition: color 0.4s cubic-bezier(0.19, 0.01, 0.55, 1);
+  position: relative;
+  text-shadow: 2px 1px;
+}
+
+.active:hover {
   color: red;
+}
+
+.active::after {
+  content: ' ';
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bio {
+  padding: 15px;
+  border-image: url(/ui/Home/Bio-container.png) 100 fill / 64px / 0px space;
 }

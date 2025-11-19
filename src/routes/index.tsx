@@ -1,5 +1,5 @@
-import Canvas from '@/components/Canvas'
-import Navigation from '@/components/Navigation'
+import AboutMe from '@/components/AboutMe'
+import Games from '@/components/Games'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -9,9 +9,10 @@ export const Route = createFileRoute('/')({
 function App() {
   return (
     <>
-
-      <Canvas />
-      <Navigation />
+      <main className="mx-64 flex gap-8 flex-col main-content">
+        <AboutMe />
+        <Games />
+      </main>
     </>
   )
 }
