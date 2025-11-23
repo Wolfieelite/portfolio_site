@@ -12,14 +12,8 @@ export const Route = createFileRoute('/gallery')({
 
 function RouteComponent() {
   return (
-    <div className="p-8 space-y-12">
-       <PhotoAlbum />
-      <Lightbox
-        close={}
-        open={}
-        index={}
-        slides={}
-      />
+    <div className="p-32 space-y-12">
+      <PhotoAlbum layout="masonry" photos={photos} onClick={(i) => console.log(i)} spacing={40} />
     </div>
   )
 }
