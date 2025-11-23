@@ -19,7 +19,7 @@ function Navigation() {
 
 function NavigationItem({ title, url }: NavigationItemProp) {
   return (
-    <div className="text-2xl">
+    <div className="text-[11px]">
       <button className="link-container">
         <Link className="capitalize" to={url}>{title}</Link>
       </button>
