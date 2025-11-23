@@ -63,7 +63,6 @@ const photos = [
     height: '500',
   },
 ]
-
 const letterMap = [
   'a',
   'b',
@@ -93,20 +92,12 @@ const letterMap = [
   'z',
 ]
 
-const stringToLetter = (imageId: string, category: string) =>  {
+const stringToLetter = (imageId: string, category: string) => {
   //Take each character of image title break them up into an objec
 
   //splits words into their own arrays
   const wordArr = imageId.split('')
-  // console.log(wordArr)
-  
-  wordArr.forEach((word) => {
-    const wordArr = []
-    wordArr.push(word)
-    console.log(wordArr)
-  })
-
-  // console.log(category)
+  console.log(wordArr)
 }
 
 export { photos, letterMap, stringToLetter }
