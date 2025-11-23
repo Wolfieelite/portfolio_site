@@ -14,8 +14,13 @@ function Navigation() {
             <Link className="capitalize" to="/gallery">Gallery</Link>
           </button>
         </div>
+        <div className="text-3xl">
+          <button className="link-container">
+            <Link className="capitalize" to="/aboutme">About me</Link>
+          </button>
+        </div>
       </div>
-    </div>
+    </div >
   )
 }
 
