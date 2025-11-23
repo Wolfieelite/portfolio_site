@@ -15,7 +15,7 @@ function RouteComponent() {
   return (
     <div className="p-32 space-y-12">
       <PhotoAlbum
-        layout="masonry"
+        layout="rows"
         photos={photos}
         onClick={({ index }) => setIndex(index)}
         spacing={40} />
