@@ -11,9 +11,15 @@ export const Route = createFileRoute('/gallery')({
 })
 
 function RouteComponent() {
+  const [index, setIndex] = useState(-1)
   return (
     <div className="p-32 space-y-12">
-      <PhotoAlbum layout="masonry" photos={photos} onClick={(i) => console.log(i)} spacing={40} />
+      <PhotoAlbum
+        layout="masonry"
+        photos={photos}
+        onClick={({ index }) => setIndex(index)}
+        spacing={40} />
+      <Lightbox slides={photos} open={index >= 0} close={() => setIndex(-1)} />
     </div>
   )
 }
