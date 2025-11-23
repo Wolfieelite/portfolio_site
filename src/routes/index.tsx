@@ -10,7 +10,6 @@ function App() {
   return (
     <>
       <main className="mx-64 flex gap-8 flex-col main-content">
-        <AboutMe />
         <Games />
       </main>
     </>
