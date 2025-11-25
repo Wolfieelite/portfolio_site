@@ -7,23 +7,23 @@ interface NavigationItemProp {
 
 function Navigation() {
   return (
-    <div className="navigation flex justify-center gap-5 mb-12 sticky top-0 z-[99] backdrop-blur-3xl">
-      <div className="flex gap-3">
+    <nav className="navigation flex justify-center gap-5 mb-12 sticky top-0 z-[99] backdrop-blur-3xl">
+      <ul className="flex gap-3">
         <NavigationItem title="home" url="/" />
         <NavigationItem title="gallery" url="/gallery" />
         <NavigationItem title="about me" url="/aboutme" />
-      </div>
-    </div>
+      </ul>
+    </nav>
   )
 }
 
 function NavigationItem({ title, url }: NavigationItemProp) {
   return (
-    <div className="text-[11px]">
+    <li className="text-sm">
       <button className="link-container">
         <Link className="capitalize" to={url}>{title}</Link>
       </button>
-    </div>
+    </li>
   )
 }
 export default Navigation
