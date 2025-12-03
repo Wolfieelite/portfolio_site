@@ -63,41 +63,12 @@ const photos = [
     height: '500',
   },
 ]
-const letterMap = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-]
 
-const stringToLetter = (imageId: string, category: string) => {
-  //Take each character of image title break them up into an objec
-
-  //splits words into their own arrays
-  const wordArr = imageId.split('')
-  console.log(wordArr)
+const uiImage = {
+  "logo": { src: "/ui/WebLogo.png" },
+  "webbanner": { src: "/ui/Header/web-banner.png" },
+  "gameassetBanner": { src: "/ui/Home/game-asset-banner.png" },
+  "tilemapBanner": { src: "/ui/Home/tilemap-banner.png" }
 }
 
-export { photos, letterMap, stringToLetter }
+export { photos, uiImage }
