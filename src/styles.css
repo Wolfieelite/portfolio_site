@@ -22,17 +22,16 @@ body::-webkit-scrollbar {
   /*font-family: 'Bytesized', sans-serif;*/
   font-family: "Press Start 2P", system-ui;
   font-style: normal;
-  font-size: 2px;
 }
 
-.active {
+/*.active {
   color: rgb(92, 2, 2);
   transition: color 0.4s cubic-bezier(0.19, 0.01, 0.55, 1);
   position: relative;
-  text-shadow: 2px 1px;
-}
+  text-shadow: 1px 1px;
+}*/
 
-.active:hover {
+/*.active:hover {
   color: red;
 }
 
@@ -42,9 +41,9 @@ body::-webkit-scrollbar {
   height: 2px;
   background-color: currentColor;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
-}
+}*/
 
 .bio {
   padding: 15px;
