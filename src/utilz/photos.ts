@@ -1,4 +1,13 @@
-const photos = [
+type Photos = {
+  title: string;
+  src: string;
+  category: string;
+  width: string;
+  height: string;
+  globalIndex: string;
+}
+
+const photos: Photos[] = [
   {
     title: 'first sword',
     src: '/image1.png',
@@ -62,13 +71,19 @@ const photos = [
     width: '500',
     height: '500',
   },
-]
+].map((p, i) => ({
+  ...p, globalIndex: i,
+}))
+
 
 const uiImage = {
   "logo": { src: "/ui/WebLogo.png" },
   "webbanner": { src: "/ui/Header/web-banner.png" },
   "gameassetBanner": { src: "/ui/Home/game-asset-banner.png" },
-  "tilemapBanner": { src: "/ui/Home/tilemap-banner.png" }
+  "tilemapBanner": { src: "/ui/Home/tilemap-banner.png" },
+  "characterBanner": { src: "/ui/Home/character-banner.png" },
+  "interiorBanner": { src: "/ui/Home/interior-banner.png" }
 }
+
 
 export { photos, uiImage }
