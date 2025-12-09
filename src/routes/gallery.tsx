@@ -28,7 +28,7 @@ function RouteComponent() {
             <section className="backdrop-blur-lg" key={category} id={category}>
               <h1 className="text-yellow-600 backdrop-blur-3xl capitalize text-3xl sticky top-15 pb-2 -z-50">{category}</h1>
               <PhotoAlbum
-                layout={category === "landscape" ? "rows" : "rows"}
+                layout={'masonry'}
                 photos={photos}
                 onClick={({ photo }) => setIndex(photo.globalIndex)}
                 spacing={60} />
