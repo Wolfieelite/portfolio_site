@@ -1,6 +1,3 @@
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useGSAP } from "@gsap/react"
 import { createFileRoute } from '@tanstack/react-router'
 import { uiImage } from '@/utilz/photos'
 import Content from '@/components/Content'
