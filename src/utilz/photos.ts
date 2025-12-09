@@ -9,13 +9,6 @@ type Photos = {
 
 const photos: Photos[] = [
   {
-    title: 'first sword',
-    src: '/image1.png',
-    category: '64x64 pixle art',
-    width: '500',
-    height: '500',
-  },
-  {
     title: 'Bed',
     category: '16x16 pixle art',
     src: '/image2.png',
@@ -44,6 +37,13 @@ const photos: Photos[] = [
     height: '500',
   },
   {
+    title: 'first sword',
+    src: '/image1.png',
+    category: '64x64 pixle art',
+    width: '500',
+    height: '500',
+  },
+  {
     title: 'blue owl',
     category: '16x16 pixle art',
     src: '/image6.png',
@@ -61,8 +61,8 @@ const photos: Photos[] = [
     title: 'vendign machine',
     category: '16x16 pixle art',
     src: '/image8.png',
-    width: '500',
-    height: '500',
+    width: '100',
+    height: '100',
   },
   {
     title: 'the creeper',
@@ -71,6 +71,13 @@ const photos: Photos[] = [
     width: '500',
     height: '500',
   },
+  {
+    title: 'landscape',
+    category: "landscape",
+    src: '/ui/Header/web-banner.png',
+    height: '670',
+    width: '1600'
+  }
 ].map((p, i) => ({
   ...p, globalIndex: i,
 }))
@@ -78,7 +85,8 @@ const photos: Photos[] = [
 
 const uiImage = {
   "logo": { src: "/ui/WebLogo.png" },
-  "webbanner": { src: "/ui/Header/web-banner.png" },
+  "wolfLogo": { src: "/ui/WolfLogo.png" },
+  "webbanner": { src: "" },
   "gameassetBanner": { src: "/ui/Home/game-asset-banner.png" },
   "tilemapBanner": { src: "/ui/Home/tilemap-banner.png" },
   "characterBanner": { src: "/ui/Home/character-banner.png" },

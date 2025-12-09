@@ -1,3 +1,4 @@
+import { uiImage } from '@/utilz/photos';
 import { Link } from '@tanstack/react-router'
 
 interface NavigationItemProp {
@@ -7,8 +8,9 @@ interface NavigationItemProp {
 
 function Navigation() {
   return (
-    <nav className="navigation flex justify-center gap-5 mb-12 sticky top-0 z-[99] backdrop-blur-3xl">
-      <ul className="flex gap-3">
+    <nav className="navigation top-0 sticky flex gap-12 justify-center z-50 backdrop-blur-3xl">
+      <Link className='no-underline' to="/"><img src={uiImage.logo.src} /></Link>
+      <ul className="flex gap-3 items-center">
         <NavigationItem title="home" url="/" />
         <NavigationItem title="gallery" url="/gallery" />
         <NavigationItem title="about me" url="/aboutme" />
@@ -19,11 +21,11 @@ function Navigation() {
 
 function NavigationItem({ title, url }: NavigationItemProp) {
   return (
-    <li className="text-sm">
+    <li className="text-sm text-yellow-600">
       <button className="link-container">
-        <Link className="capitalize" to={url}>{title}</Link>
+        <Link className="" to={url}>{title}</Link>
       </button>
-    </li>
+    </li >
   )
 }
 export default Navigation

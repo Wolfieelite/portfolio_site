@@ -11,7 +11,11 @@ body {
   @apply m-0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(190, 140, 30);
+  background: #000D00;
+  background: linear-gradient(175deg, rgba(0, 13, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
+
 
 body::-webkit-scrollbar {
   display: none;
@@ -24,15 +28,15 @@ body::-webkit-scrollbar {
   font-style: normal;
 }
 
-/*.active {
-  color: rgb(92, 2, 2);
+.active {
+  color: rgb(190, 140, 30);
   transition: color 0.4s cubic-bezier(0.19, 0.01, 0.55, 1);
   position: relative;
   text-shadow: 1px 1px;
-}*/
+}
 
-/*.active:hover {
-  color: red;
+.active:hover {
+  color: rgb(190, 180, 30);
 }
 
 .active::after {
@@ -43,7 +47,7 @@ body::-webkit-scrollbar {
   position: absolute;
   bottom: -3px;
   left: 0;
-}*/
+}
 
 .bio {
   padding: 15px;

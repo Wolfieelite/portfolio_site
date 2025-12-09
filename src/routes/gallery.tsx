@@ -2,6 +2,7 @@ import { photos } from '../utilz/photos.js'
 import { createFileRoute } from '@tanstack/react-router'
 import PhotoAlbum from 'react-photo-album'
 import Lightbox from 'yet-another-react-lightbox'
+import "yet-another-react-lightbox/plugins/captions.css";
 import 'yet-another-react-lightbox/styles.css'
 import 'react-photo-album/styles.css'
 import { useState } from 'react'
@@ -21,22 +22,26 @@ function RouteComponent() {
 
   return (
     <>
-      <h1 className="text-2xl pl-32">Art gallery</h1>
       <div className="p-32 space-y-12">
         {
           Object.entries(groupedPhotos).map(([category, photos]) => (
-            <section key={category}>
-              <h1 className="text-3xl sticky top-20 pb-2">{category}</h1>
+            <section className="backdrop-blur-lg" key={category} id={category}>
+              <h1 className="text-yellow-600 backdrop-blur-3xl capitalize text-3xl sticky top-15 pb-2 -z-50">{category}</h1>
               <PhotoAlbum
-                layout="masonry"
+                layout={category === "landscape" ? "rows" : "rows"}
                 photos={photos}
                 onClick={({ photo }) => setIndex(photo.globalIndex)}
-                spacing={40} />
+                spacing={60} />
             </section>
           ))
         }
 
-        <Lightbox slides={photos} index={index} open={index >= 0} close={() => setIndex(-1)} />
+        <Lightbox
+          slides={photos}
+          index={index}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+        />
       </div>
     </>
   )
