@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <main id="smoothe-wrapper" className="flex gap-2.5 sm:flex gap-96 flex-col " >
+      <main id="smoothe-wrapper" className="flex gap-6 sm:flex gap-96 flex-col " >
         <Content className="content game-asset-content" title="Game Assets" url="/gallery/#64x64pixleart">
           <img className='w-full' src={uiImage.gameassetBanner.src} alt="" />
         </Content>
