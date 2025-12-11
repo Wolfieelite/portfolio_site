@@ -6,6 +6,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import 'yet-another-react-lightbox/styles.css'
 import 'react-photo-album/styles.css'
 import { useState } from 'react'
+import Games from '@/components/Games.js';
 
 export const Route = createFileRoute('/gallery')({
   component: RouteComponent,
@@ -42,6 +43,8 @@ function RouteComponent() {
           open={index >= 0}
           close={() => setIndex(-1)}
         />
+
+        <Games />
       </div>
     </>
   )
