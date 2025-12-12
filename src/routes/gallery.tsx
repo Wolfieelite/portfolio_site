@@ -44,7 +44,7 @@ function RouteComponent() {
           close={() => setIndex(-1)}
         />
 
-        <Games />
+        {/* <Games /> */}
       </div>
     </>
   )
