@@ -4,7 +4,7 @@ function Games() {
       allowtransparency="true"
       frameborder="0"
       allowfullscreen
-      width={"100vw"}></iframe>
+    ></iframe>
   )
 }
 
